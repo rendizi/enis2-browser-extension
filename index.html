@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/diary.js"></script>
+    <script src="js/automate.js"></script>
+    <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+    <div id="error-window" class="error-window">
+        <div class="error-content">
+            <span id="error-message" class="error-message"></span>
+            <button id="close-error-button" class="close-error-button">Close</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form class="my-form" id="login-form" method="post">
+            <input type="number" id="login-input" name="login" placeholder="Login (12 digits)" minlength="12" maxlength="12" pattern="\d{12}" required>
+            <input type="password" id="password-input" name="password" placeholder="Password" required>
+            <select id="school-select" name="school">
+                <option value="akb">Aktobe FMN</option>
+            </select>
+            <input type="submit" value="Enter">
+        </form>
+        
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "name": "ENIS",
+    "version": "1.0.1",
+    "description": "Quick access to grades",
+    "manifest_version": 3,
+    "author": "Baglanov Alikhan",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "ENIS"
+    }
+}
