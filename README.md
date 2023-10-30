@@ -3,7 +3,7 @@ Quick access to grades
 
 <h2>How to install?</h2>
 
-Install all files, unzip. Open your browser (Chrome or Microsoft Edge) and click on extensions->manage extensions. In the new window, select "Load unpacked" and select your unzipped file. Scroll down to the "From other sources" section and make sure ENIS is enabled. Now open the extension drop-down window again and click on the eye next to ENIS.
+Install all files, unzip. Open your browser (Chrome or Microsoft Edge) and click on extensions->manage extensions. Enable developer mode. In the new window, select "Load unpacked" and select your unzipped file. Scroll down to the "From other sources" section and make sure ENIS is enabled. Now open the extension drop-down window again and click on the eye next to ENIS.
 
 <h2>How to use it?</h2>
 
