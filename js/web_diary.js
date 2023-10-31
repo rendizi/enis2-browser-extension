@@ -1,8 +1,32 @@
-let jsonData;
 authToken = sessionStorage.getItem('authToken');
 city = localStorage.getItem('city');
 term = sessionStorage.getItem('termId');
 apiUrl = `https://api.enis2.ml/dashboard/diary/${term}?city=${city}`;
+function addTableRow(subject, percentage, grade) {
+    const table = document.querySelector("table");
+    const row = table.insertRow();
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    cell1.innerHTML = subject + " - " + percentage + "%";
+    cell2.innerHTML = grade;
+    const lineClass = getLineClass(grade);
+    if (lineClass) {
+        row.classList.add("line", lineClass);
+    }
+}
+
+function getLineClass(grade) {
+    switch (grade) {
+        case 5:
+            return "line-green";
+        case 4:
+        case 3:
+            return "line-yellow";
+        default:
+            return "line-red";
+    }
+}
+
 
 fetch(apiUrl, {
     method: 'GET',
@@ -18,21 +42,12 @@ fetch(apiUrl, {
         return response.json();
     })
     .then((data) => {
-        let jsonData = data
-        const table = document.querySelector("table");
-        console.log(jsonData,"there is jsonData")
-        jsonData.data.forEach(item => {
-            const row = table.insertRow();
-            const subjectCell = row.insertCell(0);
-            const percentageCell = row.insertCell(1);
-
-            subjectCell.innerHTML = item.Name;
-            if (item.Score !== 0) {
-                percentageCell.innerHTML = item.Score + "%";
-            } else {
-                percentageCell.innerHTML = "N/A";
+        if (data && data.data && data.data.length > 0) {
+            for (const item of data.data) {
+                // Adjust the property names to match your response structure
+                addTableRow(item.Name, item.Score, item.Mark);
             }
-        });
+        }
     })
     .catch((error) => {
         console.error('Error fetching data: ', error);

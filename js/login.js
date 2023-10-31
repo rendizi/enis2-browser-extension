@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     'authorization': '1', 
                     'Content-Type': 'application/json'
                 },
+                mode: 'no-cors',
                 body: JSON.stringify({
                     login: login,
                     password: password,

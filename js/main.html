@@ -12,13 +12,13 @@
             padding: 20px;
             min-width: 400px;
         }
-        
+
         div {
             background-color: #333;
             border-radius: 10px;
             padding: 20px;
             margin: 20px auto;
-            width: 60%;
+            width: 85%;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         h1 {
@@ -27,36 +27,39 @@
         }
 
         table {
-            width: 50%;
+            width: 90%;
             border-collapse: collapse;
             margin: 20px auto;
         }
 
-        table, th, td {
-            border: 1px solid #333;
-        }
-
-        th, td {
+        td {
             padding: 10px;
             text-align: left;
         }
 
-        th {
-            background-color: #333;
+        .line {
+            border-bottom: 2px solid;
         }
 
+        .line-green{
+            border-color: green;
+        }
+
+        .line-yellow {
+            border-color: yellow;
+        }
+
+        .line-red {
+            border-color: red;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Subject Grades</h1>
-        <table>
-            <tr>
-                <th>Subject</th>
-                <th>Percentage</th>
-            </tr>
-        </table>
-    </div>
-    <script src="web_diary.js"></script>
+<div>
+    <h1>Subject Grades</h1>
+    <table>
+    </table>
+</div>
+<script src="web_diary.js"></script>
 </body>
 </html>
